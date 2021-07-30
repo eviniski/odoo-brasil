@@ -203,7 +203,7 @@ class SpedEfdContribuicoes(models.Model):
         dt = self.date_end
         dta_e = '%s-%s-%s' %(str(dt.year),str(dt.month).zfill(2),
             str(dt.day).zfill(2))
-        periodo = 'date_trunc(\'day\', ie.data_fatura) \
+        periodo = 'date_trunc(\'day\', data_fatura) \
             between \'%s\' and \'%s\'' %(dta_s, dta_e)
         # FORNECEDORES
         for item_lista in self.query_registro0150(periodo):
